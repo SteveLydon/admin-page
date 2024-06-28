@@ -27,7 +27,96 @@ body{
     background-color: var(--color-white);
     grid-row-start: 1;
     grid-column-start: 2;
+    padding: var(--projects-padding);
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    svg{
+        height: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    input{
+        display: block;
+        height: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 60%;
+        border: none;
+        border-radius: 2rem;
+        background-color: var(--color-grey);
+    }
+
+    h1{
+        margin-bottom: 0px;
+    }
 }
+
+.profile-area{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 3.5fr;
+    .profile-picture{
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-yellow);
+        margin-left: auto;
+    }
+    .profile-name{
+        height: 100%;
+    }
+    .profile-name p{
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+        font-size: larger;
+        font-weight: 700;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+    .notification{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+}
+.search-area{
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) 24fr;
+}
+
+.header-controls{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    button{
+        font-size: larger;
+        border:none;
+        background-color: var(--color-blue);
+        height: 50px;
+        min-width: max-content;
+        color: var(--color-white);
+        border-radius: 50px;
+        margin-top: auto;
+    }
+
+}
+
+.user-header{
+    display: grid;
+    grid-template-columns: 1fr minmax(max-content, 3fr) 4fr;
+    .profile-picture{
+        border-radius: 50px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--color-yellow);
+    }
+    .user-greeting{
+    }
+}
+
 .main{
     background-color: var(--color-grey);
     grid-row-start: 2;
@@ -35,6 +124,8 @@ body{
 }
 .sidebar{
     display: grid;
+    padding: 30px;
+    row-gap: 20px;
     grid-template-rows: repeat(12, max-content);
     grid-template-columns: max-content 1fr;
     background-color: var(--color-blue);
@@ -52,9 +143,8 @@ body{
     p{
         margin-top: auto;
         margin-bottom: auto;
+        font-size: x-large;
     }
-
-
 }
 
 .main-projects{
